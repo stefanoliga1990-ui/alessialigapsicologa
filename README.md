@@ -17,7 +17,7 @@ funzionalita applicative o accesso a un database.
 
 La pagina include foto, qualifica, biografia integrale, contatti attivi e footer.
 Il layout usa tre colonne su desktop, due sotto 1100 px e una sotto 760 px.
-Su smartphone il collegamento ai contatti rimane visibile nella testata.
+Su smartphone il collegamento ai contatti è nella testata, fissa sopra i 400 px.
 CSS e immagine pubblica si trovano in `static/assets/`, senza dipendenze esterne.
 Email e telefono usano collegamenti `mailto:` e `tel:`; LinkedIn rimanda al profilo fornito.
 La biografia e la fotografia preliminari nella radice sono materiali di lavoro:
@@ -113,3 +113,8 @@ separato oppure cambiare il deployment per servire anche il sito tramite Spring.
 Il Dockerfile attuale avvia esclusivamente Nginx: aggiungere codice Java non lo
 rende automaticamente attivo in produzione. Il backend non include ancora
 configurazioni database o API applicative.
+
+## Accessibilità e prestazioni
+
+Foto WebP con fallback JPEG, decorazioni CSS e nessuna dipendenza frontend.
+Risultati e limiti dei controlli: [report](docs/accessibilita-prestazioni.md).
