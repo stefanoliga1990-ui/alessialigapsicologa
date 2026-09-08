@@ -1,16 +1,18 @@
 # Layout attuale
 
-Stile sobrio avorio e salvia, conservato dalla versione precedente al restyling annullato.
-La foto scelta ? `immagine bianco e nero.jpeg`, riprodotta integralmente, con proporzioni
-1207 ? 1600 e larghezza massima di 168 px (160 px su mobile).
+Sfondo della pagina verde chiaro #EAF0E9, ripreso dalla precedente scheda Contatti.
+Scheda Contatti verde pi? scuro #C0D2BC, con testo e collegamenti scuri.
 
-La testata superiore ? rimossa. Il contenuto inizia dopo un piccolo margine vuoto.
-Su desktop: foto a sinistra, biografia centrale pi? ampia, contatti a destra.
-Il footer resta in fondo alla finestra quando il contenuto entra nello spazio disponibile.
-Sotto 992 px il layout diventa verticale. Il corpo della biografia rimane di 16 px;
-le finestre desktop basse o strette hanno interlinea e spazi pi? compatti.
+Foto in bianco e nero: proporzioni originali 1207 ? 1600, larghezza massima
+224 px su desktop e 208 px su mobile. Su desktop ? centrata verticalmente
+nell'area del contenuto sopra il footer, mantenendo la colonna sinistra.
 
-Controlli browser: nessuno scroll verticale a 1024?768, 1280?600, 1280?720,
-1366?768 e 1920?1080. A 390?844 il layout ? verticale e scorre senza overflow
-orizzontale. Non viene imposto overflow nascosto n? altezza fissa ai contenuti:
-su finestre troppo piccole o con zoom elevato lo scroll conserva la leggibilit?.
+Biografia centrale pi? stretta, con intervalli laterali fluidi di 24?48 px.
+La distribuzione verticale dei paragrafi porta la fine del testo vicino al footer
+quando c'? spazio disponibile, mantenendo tutto il testo originale.
+Su mobile i paragrafi tornano al flusso naturale, senza spazi distribuiti.
+
+Verifiche: 1366?768 e 1024?768 senza scroll verticale. A 1366?768 la foto ?
+larga 224 px, con circa 201 px sopra e sotto nell'area principale; l'ultimo
+paragrafo termina a circa 23 px dal footer. Su finestre troppo piccole resta
+consentito lo scroll per non tagliare il testo.

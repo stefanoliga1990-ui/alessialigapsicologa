@@ -1,11 +1,11 @@
 :root {
     color-scheme: light;
-    --background: #faf8f4;
-    --surface: #eaf0e9;
+    --background: #eaf0e9;
+    --surface: #c0d2bc;
     --text: #293c35;
     --muted: #53645d;
     --accent: #456454;
-    --border: #d8e0d8;
+    --border: #b5c7b1;
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     color: var(--text);
     background: var(--background);
@@ -34,14 +34,16 @@ a:hover { text-decoration-thickness: 2px; }
 
 .profile {
     display: grid;
-    grid-template-columns: clamp(8rem, 12vw, 11rem) minmax(0, 1fr) 14.5rem;
-    gap: clamp(1.25rem, 2.5vw, 2rem);
+    grid-template-columns: clamp(10rem, 17vw, 14rem) minmax(0, 1fr) 14.5rem;
+    gap: clamp(1.5rem, 3vw, 3rem);
     align-items: start;
     padding-block: clamp(1rem, 3vh, 2.5rem);
     flex: 1;
 }
 .profile > * { min-width: 0; }
-.portrait { width: 100%; max-width: 10.5rem; margin: 0; }
+.portrait { width: 100%; max-width: 14rem; margin: 0; align-self: center; }
+.biography { align-self: stretch; display: flex; flex-direction: column; }
+.biography section { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
 .portrait img {
     display: block;
     width: 100%;
@@ -73,7 +75,8 @@ h1 {
 .biography section p:last-child { margin-bottom: 0; }
 
 .contacts { padding: 1.6rem 1.35rem; border-radius: 1.25rem; background: var(--surface); overflow-wrap: anywhere; }
-.contacts .eyebrow { font-size: .6875rem; letter-spacing: .1em; margin-bottom: .6rem; }
+.contacts a { color: var(--text); }
+.contacts .eyebrow { color: #43534b; font-size: .6875rem; letter-spacing: .1em; margin-bottom: .6rem; }
 .contacts h2 { font-size: 1.875rem; margin: 0 0 1rem; }
 .contact-list { margin: 1.5rem 0 2rem; }
 .contact-list > div + div { margin-top: 1.25rem; }
@@ -90,13 +93,14 @@ h1 {
 
 @media (max-width: 62rem) {
     .profile { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
-    .portrait { width: min(65%, 10rem); margin-inline: auto; }
+    .portrait { width: min(70%, 13rem); margin-inline: auto; }
+    .biography section { display: block; }
     .biography section p { line-height: 1.55; }
     .site-footer { align-items: flex-start; }
 }
 
 @media (min-width: 62.01rem) and (max-height: 720px), (min-width: 62.01rem) and (max-width: 75rem) {
-    .profile { padding-block: 1rem; gap: 1.25rem; }
+    .profile { padding-block: 1rem; }
     .profile-heading { padding-bottom: .6rem; margin-bottom: .6rem; }
     h1 { font-size: 2rem; margin-bottom: .5rem; }
     .eyebrow { margin-bottom: .4rem; }
@@ -106,7 +110,7 @@ h1 {
 }
 
 @media (min-width: 62.01rem) and (max-width: 75rem) {
-    .profile { grid-template-columns: 7.5rem minmax(0, 1fr) 13.5rem; gap: 1rem; }
+    .profile { grid-template-columns: 10rem minmax(0, 1fr) 13.5rem; gap: 1.5rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
