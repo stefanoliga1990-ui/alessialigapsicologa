@@ -1,0 +1,10 @@
+# Only the public site and server configuration enter the build context.
+**
+!Dockerfile
+!nginx/
+!nginx/default.conf.template
+!src/
+!src/main/
+!src/main/resources/
+!src/main/resources/static/
+!src/main/resources/static/**

@@ -1,0 +1,29 @@
+name: Verify static site
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  nginx:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build static image
+        run: docker build --pull -t alessialiga-static .
+      - name: Validate default Nginx configuration
+        run: docker run --rm alessialiga-static nginx -t
+      - name: Check site on a custom runtime port
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run -d --name site -e PORT=9090 -p 127.0.0.1:18080:9090 alessialiga-static
+          trap 'docker logs site; docker rm -f site' EXIT
+          curl --fail --retry 10 --retry-connrefused --retry-delay 1 \
+            http://127.0.0.1:18080/ -o /tmp/site-index.html
+          cmp src/main/resources/static/index.html /tmp/site-index.html
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:18080/nonexistent-page)" = 404
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:18080/pom.xml)" = 404
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:18080/.git/config)" = 403
