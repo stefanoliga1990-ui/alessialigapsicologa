@@ -13,12 +13,12 @@
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; }
+body { margin: 0; min-height: 100svh; display: flex; flex-direction: column; }
 a { color: var(--accent); text-underline-offset: .25em; }
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
-[id] { scroll-margin-top: 7rem; }
-.page-width { width: min(100% - 5rem, 77.5rem); margin-inline: auto; }
+[id] { scroll-margin-top: 1rem; }
+.page-width { width: min(100% - 3rem, 96rem); margin-inline: auto; }
 
 .skip-link {
     position: fixed;
@@ -32,54 +32,21 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .skip-link:focus { transform: translateY(0); }
 
-.site-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding-block: 1.75rem;
-    border-bottom: 1px solid var(--border);
-}
-.wordmark {
-    font: 1.5rem/1.2 Georgia, "Times New Roman", serif;
-    color: var(--text);
-    text-decoration: none;
-}
-.wordmark span {
-    display: block;
-    margin-top: .4rem;
-    font: .75rem/1.4 system-ui, sans-serif;
-    letter-spacing: .13em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-.contact-shortcut {
-    display: inline-flex;
-    align-items: center;
-    gap: 1.25rem;
-    min-height: 44px;
-    padding: .6rem 1.1rem;
-    border: 1px solid var(--accent);
-    border-radius: 100px;
-    font-size: .9375rem;
-}
-.contact-shortcut:hover { background: var(--surface); }
-
 .profile {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2.15fr) minmax(0, 1fr);
-    gap: clamp(1.5rem, 3vw, 2.5rem);
+    grid-template-columns: clamp(8rem, 12vw, 11rem) minmax(0, 1fr) 14.5rem;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
     align-items: start;
-    padding-block: 4.5rem 5rem;
+    padding-block: clamp(1rem, 3vh, 2.5rem);
+    flex: 1;
 }
 .profile > * { min-width: 0; }
-.portrait { width: 90%; margin: 0; }
+.portrait { width: 100%; max-width: 10.5rem; margin: 0; }
 .portrait img {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 1;
+
     border-radius: 1.25rem;
     box-shadow: 0 12px 32px rgb(41 60 53 / 7%);
 }
@@ -94,15 +61,15 @@ a:hover { text-decoration-thickness: 2px; }
 }
 h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 h1 {
-    margin: 0 0 1.25rem;
-    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    margin: 0 0 .75rem;
+    font-size: clamp(2rem, 3vw, 2.75rem);
     letter-spacing: -.035em;
     line-height: 1.1;
 }
-.qualification { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.7; }
-.profile-heading { padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border); }
-.biography h2 { font-size: 1.5rem; margin: 0 0 1.25rem; line-height: 1.3; }
-.biography section p { font-size: 1.0625rem; line-height: 1.8; margin: 0 0 1.3rem; }
+.qualification { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
+.profile-heading { padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); }
+.biography h2 { font-size: 1.5rem; margin: 0 0 .75rem; line-height: 1.3; }
+.biography section p { font-size: 1rem; line-height: 1.65; margin: 0 0 .9rem; }
 .biography section p:last-child { margin-bottom: 0; }
 
 .contacts { padding: 1.6rem 1.35rem; border-radius: 1.25rem; background: var(--surface); overflow-wrap: anywhere; }
@@ -117,32 +84,29 @@ h1 {
 .social-list li { padding-block: .8rem; border-top: 1px solid var(--border); font-size: .9375rem; line-height: 1.5; }
 .contact-list a, .social-list a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; gap: .5rem; overflow-wrap: anywhere; }
 
-.site-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-block: 1.5rem 2rem; border-top: 1px solid var(--border); font-size: .875rem; color: var(--muted); }
+.site-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-block: .75rem; border-top: 1px solid var(--border); font-size: .875rem; color: var(--muted); }
 .site-footer p { margin: 0; }
 .site-footer a { display: inline-flex; align-items: center; gap: .75rem; min-height: 44px; }
 
-@media (max-width: 68.75rem) {
-    .profile { grid-template-columns: minmax(0, 1fr) minmax(0, 2.15fr); padding-top: 3rem; }
-    .contacts { grid-column: 1 / -1; padding: 2rem; }
-    .contact-list { display: flex; flex-wrap: wrap; gap: 1.5rem 3rem; }
-    .contact-list > div + div { margin-top: 0; }
-    .social-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+@media (max-width: 62rem) {
+    .profile { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+    .portrait { width: min(65%, 10rem); margin-inline: auto; }
+    .biography section p { line-height: 1.55; }
+    .site-footer { align-items: flex-start; }
 }
 
-@media (max-width: 47.5rem) {
-    .page-width { width: calc(100% - 2.5rem); }
-    .site-header { position: sticky; top: 0; z-index: 2; padding-block: 1rem; background: var(--background); }
-    .wordmark { font-size: 1.25rem; }
-    .contact-shortcut { gap: .75rem; padding-inline: .85rem; }
-    .profile { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; padding-block: 2rem 3rem; }
-    .portrait { width: min(90%, 18rem); margin-inline: auto; }
-    .profile-heading { padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
-    h1 { font-size: 2.5rem; }
-    .contacts { grid-column: auto; padding: 1.5rem; }
-    .contact-list { display: block; }
-    .contact-list > div + div { margin-top: 1.25rem; }
-    .social-list { display: block; }
-    .site-footer { align-items: flex-start; }
+@media (min-width: 62.01rem) and (max-height: 720px), (min-width: 62.01rem) and (max-width: 75rem) {
+    .profile { padding-block: 1rem; gap: 1.25rem; }
+    .profile-heading { padding-bottom: .6rem; margin-bottom: .6rem; }
+    h1 { font-size: 2rem; margin-bottom: .5rem; }
+    .eyebrow { margin-bottom: .4rem; }
+    .biography h2 { margin-bottom: .6rem; font-size: 1.3rem; }
+    .biography section p { line-height: 1.45; margin-bottom: .65rem; }
+    .site-footer { padding-block: .4rem; }
+}
+
+@media (min-width: 62.01rem) and (max-width: 75rem) {
+    .profile { grid-template-columns: 7.5rem minmax(0, 1fr) 13.5rem; gap: 1rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -150,7 +114,7 @@ h1 {
 }
 
 @media print {
-    .site-header, .skip-link, .site-footer a { display: none; }
+    .skip-link, .site-footer a { display: none; }
     .page-width { width: 100%; }
     .profile { display: block; padding: 0; }
     .portrait { width: 10rem; margin: 0 0 2rem; }

@@ -16,8 +16,10 @@ funzionalita applicative o accesso a un database.
 - `.github/workflows/static-site.yml`: verifica del container a ogni push e pull request.
 
 La pagina include foto, qualifica, biografia integrale, contatti attivi e footer.
-Il layout usa tre colonne su desktop, due sotto 1100 px e una sotto 760 px.
-Su smartphone il collegamento ai contatti rimane visibile nella testata.
+Il layout usa tre colonne su desktop e una sotto 992 px. La testata superiore ? rimossa.
+Spazi e colonne si adattano alla finestra, con una modalit? compatta per desktop bassi o stretti.
+Verificato senza scroll a 1024?768, 1280?600, 1280?720, 1366?768 e 1920?1080.
+Su finestre ancora pi? piccole e con zoom elevato resta consentito lo scroll, senza tagliare testo.
 CSS e immagine pubblica si trovano in `static/assets/`, senza dipendenze esterne.
 Email e telefono usano collegamenti `mailto:` e `tel:`; LinkedIn rimanda al profilo fornito.
 La biografia e la fotografia preliminari nella radice sono materiali di lavoro:
@@ -33,7 +35,7 @@ Tutto cio che viene inserito in `static/` e destinato alla pubblicazione.
   separano foto, biografia e contatti senza dipendere dal numero di paragrafi.
 - Gestire colori e caratteri nel CSS condiviso `assets/css/style.css`.
 - Per nuove pagine, aggiungere file HTML nella cartella `static/`, riutilizzare
-  il foglio di stile e inserire i collegamenti nella testata quando necessari.
+  il foglio di stile e aggiungere una navigazione dedicata quando necessaria.
 
 ## Anteprima locale senza Java o Docker
 

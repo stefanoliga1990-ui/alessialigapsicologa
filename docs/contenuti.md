@@ -4,7 +4,7 @@
 
 - Nome: Alessia Liga
 - Qualifica: Psicologa - Specializzanda in Psicoterapia presso la Scuola di Psicologia della Salute.
-- Foto scelta: `immagine preliminare.jpg`, nella radice del progetto.
+- Foto scelta: `immagine bianco e nero.jpeg`, nella radice del progetto.
 - Testo alternativo previsto per la foto: `Alessia Liga`.
 
 Usare la qualifica completa, senza abbreviare il titolo in "Psicoterapeuta".
