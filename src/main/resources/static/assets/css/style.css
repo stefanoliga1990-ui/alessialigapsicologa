@@ -108,7 +108,6 @@ h1 {
 .contacts { padding: 1.6rem 1.35rem; border-radius: 1.25rem; background: var(--surface); overflow-wrap: anywhere; }
 .contacts .eyebrow { font-size: .6875rem; letter-spacing: .1em; margin-bottom: .6rem; }
 .contacts h2 { font-size: 1.875rem; margin: 0 0 1rem; }
-.draft-note { display: inline-block; margin: 0; padding: .35rem .65rem; border: 1px solid var(--muted); border-radius: .4rem; font-size: .875rem; color: var(--muted); }
 .contact-list { margin: 1.5rem 0 2rem; }
 .contact-list > div + div { margin-top: 1.25rem; }
 .contact-list dt { font-weight: 600; font-size: .875rem; margin-bottom: .4rem; }
@@ -116,7 +115,7 @@ h1 {
 .contacts h3 { margin: 0; font-size: .875rem; font-weight: 600; line-height: 1.6; }
 .social-list { margin: .75rem 0 0; padding: 0; list-style: none; }
 .social-list li { padding-block: .8rem; border-top: 1px solid var(--border); font-size: .9375rem; line-height: 1.5; }
-.social-list small { display: block; margin-top: .2rem; font-size: .875rem; color: var(--muted); }
+.contact-list a, .social-list a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; gap: .5rem; overflow-wrap: anywhere; }
 
 .site-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-block: 1.5rem 2rem; border-top: 1px solid var(--border); font-size: .875rem; color: var(--muted); }
 .site-footer p { margin: 0; }

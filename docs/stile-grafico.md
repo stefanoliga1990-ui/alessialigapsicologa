@@ -62,8 +62,8 @@ la nitidezza sui display ad alta densità, senza bloccare il lavoro attuale.
 - Angoli morbidi e ombre appena percettibili, senza effetto schede sovrapposte.
 - Icone semplici solo a supporto di etichette testuali leggibili.
 - Nessuna animazione continua o carosello.
-- Contatti mock non interattivi e chiaramente indicati come provvisori.
-- Con i dati definitivi, email e telefono diventeranno azioni dirette.
+- Contatti reali cliccabili e sottolineati, con area di interazione di almeno 44 px in altezza.
+- Email e telefono sono azioni dirette; LinkedIn apre il profilo professionale fornito.
 - Non inserire un invito a prenotare finché non saranno definite le modalità di contatto.
 
 ## Ambito di questo step
@@ -73,6 +73,6 @@ Il layout è implementato in `src/main/resources/static/index.html` e
 La testata mobile mantiene visibile un collegamento alla sezione Contatti.
 Sono presenti un collegamento per saltare alla biografia, focus visibile,
 dimensioni esplicite della fotografia e rispetto della preferenza di movimento ridotto.
-La biografia approvata e i placeholder sono raccolti in `docs/contenuti.md`.
+La biografia approvata e i contatti definitivi sono raccolti in `docs/contenuti.md`.
 Sono stati verificati integrità dei contenuti, risorse HTTP e destinazioni delle
 ancore; il collaudo visivo su browser e dispositivi resta da eseguire.

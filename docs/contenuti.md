@@ -22,27 +22,17 @@ Ha lavorato in ambito psicoeducativo e sociale, occupandosi di inclusione, soste
 
 Attualmente conduce gruppi di supporto e psicoeducazione per la gestione di conflitti, ansia e stress, e percorsi di sostegno alla genitorialità orientati a valorizzare risorse e punti di forza. In qualità di consulente, progetta interventi di promozione della salute e programmi di inclusione e sviluppo giovanile, integrando i modelli delle Life Skills e del Service-Learning.
 
-## Contatti provvisori per la bozza
+## Contatti definitivi
 
-| Voce | Contenuto da mostrare | Comportamento nella bozza |
+| Voce | Contenuto | Collegamento |
 | --- | --- | --- |
-| Email | alessia.liga@example.com | Testo, senza collegamento email |
-| Telefono | +39 XXX XXX XXXX | Testo, senza chiamata attiva |
-| Instagram | Profilo da inserire | Voce non interattiva |
-| LinkedIn | Profilo da inserire | Voce non interattiva |
-| Profilo professionale | Link da inserire | Voce non interattiva |
+| Email | Alessia.liga3@gmail.com | mailto:Alessia.liga3@gmail.com |
+| Telefono | +39 392 240 7494 | 	el:+393922407494 |
+| LinkedIn | LinkedIn | https://www.linkedin.com/in/alessia-liga-a057b985/ |
 
-Instagram e LinkedIn sono esempi di piattaforme per il layout, non profili
-confermati della dottoressa. Mostrare accanto alla sezione la dicitura
-"Contatti provvisori" finché i recapiti non saranno sostituiti.
-Non collegare profili omonimi o numeri plausibili appartenenti a terzi.
+Gli altri profili sono rimossi; potranno essere aggiunti quando saranno forniti.
 
 ## Dati ancora da ricevere
 
-- Email e telefono definitivi.
-- Piattaforme effettivamente utilizzate e relativi URL.
-- Eventuali ulteriori dati professionali da pubblicare nel footer.
-
-Non inserire indirizzi dello studio, iscrizione all'Albo, partita IVA o altre
-informazioni mancanti sotto forma di dati inventati. Prima del lancio definitivo,
-sostituire o rimuovere tutti i contatti provvisori.
+Eventuali ulteriori dati professionali da pubblicare nel footer. Non inventare
+indirizzi dello studio, iscrizione all'Albo o partita IVA.

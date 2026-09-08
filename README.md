@@ -15,14 +15,25 @@ funzionalita applicative o accesso a un database.
 - `railway.json`: build Docker, avvio predefinito dell'immagine e verifica HTTP su `/`.
 - `.github/workflows/static-site.yml`: verifica del container a ogni push e pull request.
 
-La pagina include foto, qualifica, biografia integrale, contatti provvisori e footer.
+La pagina include foto, qualifica, biografia integrale, contatti attivi e footer.
 Il layout usa tre colonne su desktop, due sotto 1100 px e una sotto 760 px.
 Su smartphone il collegamento ai contatti rimane visibile nella testata.
 CSS e immagine pubblica si trovano in `static/assets/`, senza dipendenze esterne.
-I recapiti mock non sono cliccabili e devono essere sostituiti prima del lancio.
+Email e telefono usano collegamenti `mailto:` e `tel:`; LinkedIn rimanda al profilo fornito.
 La biografia e la fotografia preliminari nella radice sono materiali di lavoro:
 il container copia solo la cartella `static/`.
 Tutto cio che viene inserito in `static/` e destinato alla pubblicazione.
+
+## Aggiornare e ampliare il sito
+
+- Modificare testi e recapiti in `src/main/resources/static/index.html`.
+- Aggiungere futuri profili come nuovi elementi `li` nella lista `social-list`:
+  il CSS gestisce automaticamente la disposizione responsive.
+- Aggiungere sezioni con un titolo e un `id` univoco; le classi della pagina
+  separano foto, biografia e contatti senza dipendere dal numero di paragrafi.
+- Gestire colori e caratteri nel CSS condiviso `assets/css/style.css`.
+- Per nuove pagine, aggiungere file HTML nella cartella `static/`, riutilizzare
+  il foglio di stile e inserire i collegamenti nella testata quando necessari.
 
 ## Anteprima locale senza Java o Docker
 
