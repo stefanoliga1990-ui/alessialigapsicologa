@@ -1,0 +1,80 @@
+/* Decorative layer only: no changes to typography, grid or content spacing. */
+body {
+    position: relative;
+    isolation: isolate;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Fine botanical silhouettes along the outer edges. */
+body::before {
+    inset: 0;
+    background-image: url("../images/botanical.svg"), url("../images/botanical.svg");
+    background-repeat: no-repeat;
+    background-size: clamp(5rem, 10vw, 10rem) auto, clamp(5rem, 9vw, 9rem) auto;
+    background-position: left -1.5rem bottom 12%, right -1.5rem bottom 3rem;
+    opacity: .5;
+}
+
+/* An open ring, cropped at the edge, keeps the background light. */
+body::after {
+    inset: 0;
+    background: radial-gradient(circle at 96% -4rem,
+        transparent 12rem, rgb(112 139 115 / 18%) 12rem,
+        rgb(112 139 115 / 18%) calc(12rem + 1px), transparent calc(12rem + 1px));
+}
+
+.portrait,
+.contacts {
+    position: relative;
+    isolation: isolate;
+}
+
+.portrait::before,
+.contacts::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    background: rgb(156 177 152 / 24%);
+}
+
+.portrait::before {
+    inset: -2rem 18% 17% -.4rem;
+    border-radius: 65% 35% 56% 44% / 55% 42% 58% 45%;
+    transform: rotate(-8deg);
+}
+
+.contacts::before {
+    width: 70%;
+    height: 44%;
+    right: 0;
+    bottom: -1.2rem;
+    border-radius: 60% 40% 52% 48% / 44% 55% 45% 56%;
+    transform: rotate(8deg);
+}
+
+@media (max-width: 62rem) {
+    body::before {
+        background-size: 5rem auto, 5rem auto;
+        background-position: left -1.7rem top 7rem, right -1.7rem bottom 2.5rem;
+        opacity: .38;
+    }
+    body::after {
+        background: radial-gradient(circle at 100% -2rem,
+            transparent 7rem, rgb(112 139 115 / 18%) 7rem,
+            rgb(112 139 115 / 18%) calc(7rem + 1px), transparent calc(7rem + 1px));
+    }
+    .portrait::before { inset: -1rem 12% 12% -.8rem; }
+    .contacts::before { right: 0; bottom: -.6rem; }
+}
+
+@media print, (forced-colors: active) {
+    body::before, body::after, .portrait::before, .contacts::before { display: none; }
+}
