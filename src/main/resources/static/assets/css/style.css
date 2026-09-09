@@ -88,7 +88,6 @@ h1 {
 
 .site-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-block: .75rem; border-top: 1px solid var(--border); font-size: .875rem; color: var(--muted); }
 .site-footer p { margin: 0; }
-.site-footer a { display: inline-flex; align-items: center; gap: .75rem; min-height: 44px; }
 
 @media (max-width: 62rem) {
     .profile { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
@@ -117,7 +116,7 @@ h1 {
 }
 
 @media print {
-    .skip-link, .site-footer a { display: none; }
+    .skip-link { display: none; }
     .page-width { width: 100%; }
     .profile { display: block; padding: 0; }
     .portrait { width: 10rem; margin: 0 0 2rem; }
