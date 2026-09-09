@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Instrument Sans';
     font-style: normal;
     font-weight: 400 600;
     font-display: swap;
-    src: url('../fonts/roboto-latin.woff2') format('woff2');
+    src: url('../fonts/instrument-sans-latin.woff2') format('woff2');
 }
 
 :root {
@@ -14,7 +14,7 @@
     --muted: #53645d;
     --accent: #456454;
     --border: #b5c7b1;
-    font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
     color: var(--text);
     background: var(--background);
     font-synthesis: none;
@@ -42,7 +42,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 .profile {
     display: grid;
-    grid-template-columns: clamp(10rem, 17vw, 14rem) minmax(0, 1fr) 14.5rem;
+    grid-template-columns: 14rem minmax(0, 1fr) 14rem;
     gap: clamp(1.5rem, 3vw, 3rem);
     align-items: start;
     padding-block: clamp(1rem, 3vh, 2.5rem);
@@ -68,7 +68,7 @@ a:hover { text-decoration-thickness: 2px; }
     text-transform: uppercase;
     line-height: 1.6;
 }
-h1, h2 { font-family: "Roboto", system-ui, sans-serif; font-weight: 400; }
+h1, h2 { font-family: "Instrument Sans", system-ui, sans-serif; font-weight: 400; }
 h1, .biography h2 { font-weight: 600; }
 h1 {
     margin: 0 0 .75rem;
@@ -100,7 +100,7 @@ h1 {
 
 @media (max-width: 62rem) {
     .profile { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
-    .portrait { width: min(70%, 13rem); margin-inline: auto; }
+    .portrait, .contacts { width: min(100%, 14rem); margin-inline: auto; }
     .biography section { display: block; }
     .biography section p { line-height: 1.55; }
     .site-footer { align-items: flex-start; }
@@ -117,7 +117,7 @@ h1 {
 }
 
 @media (min-width: 62.01rem) and (max-width: 75rem) {
-    .profile { grid-template-columns: 10rem minmax(0, 1fr) 13.5rem; gap: 1.5rem; }
+    .profile { grid-template-columns: 13.5rem minmax(0, 1fr) 13.5rem; gap: 1.5rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -131,3 +131,23 @@ h1 {
     .portrait { width: 10rem; margin: 0 0 2rem; }
     .contacts { margin-top: 2rem; break-inside: avoid; }
 }
+
+/* Icons have accessible labels; future contact methods reuse the same row. */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.contact-list > div, .social-list li { display: grid; grid-template-columns: 1.125rem minmax(0, 1fr); align-items: center; gap: .5rem; }
+.contact-list dt { margin: 0; }
+.contact-icon { display: block; width: 1.25rem; height: 1.25rem; color: var(--text); }
+.contact-list a, .social-list a { display: block; align-content: center; overflow-wrap: anywhere; }
+.site-footer { justify-content: center; text-align: center; }
+
+/* The contact panel shares the portrait's proportions and column width. */
+.contacts { width: 100%; max-width: 14rem; aspect-ratio: 1207 / 1600; padding: .75rem; display: flex; flex-direction: column; justify-content: center; }
+.contacts > * { flex-shrink: 0; }
+.contacts h2 { margin-bottom: .5rem; }
+.contact-list { margin: .5rem 0; }
+.contact-list > div + div { margin-top: .5rem; }
+.contact-list dd, .social-list li { font-size: .875rem; }
+.social-list { margin: 0; }
+.social-list li { padding-block: .25rem; }
+.contact-icon { width: 1.125rem; height: 1.125rem; }
+.contact-list a, .social-list a { white-space: nowrap; overflow-wrap: normal; }

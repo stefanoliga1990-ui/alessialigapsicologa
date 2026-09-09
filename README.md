@@ -115,3 +115,10 @@ separato oppure cambiare il deployment per servire anche il sito tramite Spring.
 Il Dockerfile attuale avvia esclusivamente Nginx: aggiungere codice Java non lo
 rende automaticamente attivo in produzione. Il backend non include ancora
 configurazioni database o API applicative.
+
+## Tipografia e contatti
+
+La versione approvata usa Instrument Sans (pesi 400?600), servito localmente da
+`assets/fonts/` con licenza OFL inclusa. Nome e titolo della biografia hanno peso 600.
+Il footer ? centrato; la scheda Contatti ha le proporzioni della fotografia,
+con icone a sinistra e recapiti su una riga.
