@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400 600;
+    font-display: swap;
+    src: url('../fonts/montserrat-latin.woff2') format('woff2');
+}
+
 :root {
     color-scheme: light;
     --background: #eaf0e9;
@@ -6,7 +14,7 @@
     --muted: #53645d;
     --accent: #456454;
     --border: #b5c7b1;
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
     color: var(--text);
     background: var(--background);
     font-synthesis: none;
@@ -60,7 +68,8 @@ a:hover { text-decoration-thickness: 2px; }
     text-transform: uppercase;
     line-height: 1.6;
 }
-h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+h1, h2 { font-family: "Montserrat", system-ui, sans-serif; font-weight: 400; }
+h1, .biography h2 { font-weight: 600; }
 h1 {
     margin: 0 0 .75rem;
     font-size: clamp(2rem, 3vw, 2.75rem);
