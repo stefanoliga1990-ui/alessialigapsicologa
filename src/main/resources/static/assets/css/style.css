@@ -101,6 +101,28 @@ h1 {
 .biography section p { font-size: 1rem; line-height: 1.65; margin: 0 0 .9rem; }
 .biography section p:last-child { margin-bottom: 0; }
 
+/* The approach page retains the body font size while fitting its longer copy. */
+@media (min-width: 62.01rem) {
+    .approach-profile {
+        width: min(100% - 2rem, 96rem);
+        gap: 1rem;
+    }
+    .approach-biography .profile-heading { padding-bottom: .4rem; margin-bottom: .4rem; }
+    .approach-biography .section-navigation { margin-bottom: .4rem; }
+    .approach-biography .eyebrow { margin-bottom: .25rem; }
+    .approach-biography h1 { margin-bottom: .3rem; }
+    .approach-biography .qualification { line-height: 1.35; }
+    .biography .approach {
+        column-count: 2;
+        column-gap: 1.5rem;
+    }
+    .biography .approach h2 {
+        column-span: all;
+        margin-bottom: .45rem;
+    }
+    .biography .approach p { line-height: 1.2; margin-bottom: .3rem; }
+}
+
 .contacts { align-self: center; padding: 1.6rem 1.35rem; border-radius: 1.25rem; background: var(--surface); overflow-wrap: anywhere; }
 .contacts a { color: var(--text); }
 .contacts .eyebrow { color: #43534b; font-size: .6875rem; letter-spacing: .1em; margin-bottom: .6rem; }
@@ -138,6 +160,16 @@ h1 {
 
 @media (min-width: 62.01rem) and (max-width: 75rem) {
     .profile { grid-template-columns: 13.5rem minmax(0, 1fr) 13.5rem; gap: 1.5rem; }
+}
+
+@media (min-width: 62.01rem) and (max-height: 720px) {
+    .approach-profile { padding-block: .25rem; }
+    .approach-biography .profile-heading { padding-bottom: .2rem; margin-bottom: .2rem; }
+    .approach-biography .section-navigation { margin-bottom: .2rem; }
+    .approach-biography .eyebrow { margin-bottom: .1rem; }
+    .approach-biography h1 { margin-bottom: .15rem; }
+    .biography .approach h2 { margin-bottom: .25rem; }
+    .biography .approach p { line-height: 1.18; margin-bottom: .2rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
